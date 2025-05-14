@@ -1,19 +1,23 @@
+/* Сброс стандартных отступов для всех элементов */
 * {
   margin: 0;
 }
 
+/* Основные стили для body */
 body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Стили для навигационной панели */
 .navbar {
   width: 100%;
   height: 50px;
   background-color: black;
-  position: sticky;
-  top: 0;
+  position: sticky; /* Фиксированная позиция при прокрутке */
+  top: 0; /* Прилипает к верху экрана */
 }
 
+/* Контейнер для элементов навигации */
 .navbar-container {
   display: flex;
   align-items: center;
@@ -23,64 +27,77 @@ body {
   font-family: "Sen", sans-serif;
 }
 
+/* Стили для контейнера логотипа */
 .logo-container {
-  flex: 1;
+  flex: 1; /* Занимает 1 часть доступного пространства */
 }
 
+/* Стили для самого логотипа */
 .logo {
   font-size: 30px;
-  color: #4dbf00;
+  color: #4dbf00; /* Зеленый цвет для логотипа */
 }
 
+/* Контейнер для меню */
 .menu-container {
-  flex: 6;
+  flex: 6; /* Занимает 6 частей доступного пространства */
 }
 
+/* Стили для списка меню */
 .menu-list {
   display: flex;
-  list-style: none;
+  list-style: none; /* Убирает маркеры списка */
 }
 
+/* Стили для элементов меню */
 .menu-list-item {
   margin-right: 30px;
 }
 
+/* Стиль для активного пункта меню */
 .menu-list-item.active {
   font-weight: bold;
 }
+
+/* Контейнер для профиля пользователя */
 .profile-container {
-  flex: 2;
+  flex: 2; /* Занимает 2 части доступного пространства */
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Выравнивание по правому краю */
 }
 
+/* Контейнер для текста профиля */
 .profile-text-container {
   margin: 0 20px;
 }
 
+/* Стили для аватарки профиля */
 .profile-picture {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
+  border-radius: 50%; /* Круглая форма */
+  object-fit: cover; /* Заполнение пространства с сохранением пропорций */
 }
 
+/* Стили для переключателя темы */
 .toggle {
   width: 40px;
   height: 20px;
   background-color: white;
-  border-radius: 30px;
+  border-radius: 30px; /* Скругленные углы */
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
 }
 
+/* Иконка для переключателя */
 .toggle-icon {
   color: goldenrod;
 }
 
+/* Шарик переключателя */
 .toggle-ball {
   width: 18px;
   height: 18px;
@@ -89,14 +106,15 @@ body {
   right: 1px;
   border-radius: 50%;
   cursor: pointer;
-  transition: 1s ease all;
+  transition: 1s ease all; /* Плавная анимация */
 }
 
+/* Стили для боковой панели */
 .sidebar {
   width: 50px;
   height: 100%;
   background-color: black;
-  position: fixed;
+  position: fixed; /* Фиксированное позиционирование */
   top: 0;
   display: flex;
   flex-direction: column;
@@ -104,24 +122,28 @@ body {
   padding-top: 60px;
 }
 
+/* Иконки в боковом меню */
 .left-menu-icon {
   color: white;
   font-size: 20px;
   margin-bottom: 40px;
 }
 
+/* Основной контейнер контента */
 .container {
   background-color: #151515;
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px); /* Высота минус высота навигации */
   color: white;
 }
 
+/* Контейнер для основного содержимого */
 .content-container {
-  margin-left: 50px;
+  margin-left: 50px; /* Отступ для боковой панели */
 }
 
+/* Стили для выделенного контента */
 .featured-content {
-  height: 50vh;
+  height: 50vh; /* 50% высоты экрана */
   padding: 50px;
 }
 
@@ -135,6 +157,7 @@ body {
   margin: 30px 0;
 }
 
+/* Стиль кнопки */
 .featured-button {
   background-color: #4dbf00;
   color: white;
@@ -145,48 +168,55 @@ body {
   font-weight: bold;
 }
 
+/* Контейнер для списка фильмов */
 .movie-list-container {
   padding: 0 20px;
 }
 
+/* Обертка для списка фильмов */
 .movie-list-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Скрывает выходящие за пределы элементы */
 }
 
+/* Список фильмов */
 .movie-list {
   display: flex;
   align-items: center;
   height: 300px;
-  transform: translateX(0);
-  transition: all 1s ease-in-out;
+  transform: translateX(0); /* Позиционирование для анимации */
+  transition: all 1s ease-in-out; /* Плавная анимация */
 }
 
+/* Элемент списка фильмов */
 .movie-list-item {
   margin-right: 30px;
   position: relative;
 }
 
+/* Эффекты при наведении на элемент фильма */
 .movie-list-item:hover .movie-list-item-img {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Увеличение */
   margin: 0 30px;
-  opacity: 0.5;
+  opacity: 0.5; /* Полупрозрачность */
 }
 
 .movie-list-item:hover .movie-list-item-title,
 .movie-list-item:hover .movie-list-item-desc,
 .movie-list-item:hover .movie-list-item-button {
-  opacity: 1;
+  opacity: 1; /* Появление элементов */
 }
 
+/* Изображение фильма */
 .movie-list-item-img {
   transition: all 1s ease-in-out;
   width: 270px;
   height: 200px;
-  object-fit: cover;
+  object-fit: cover; /* Заполнение с сохранением пропорций */
   border-radius: 20px;
 }
 
+/* Заголовок фильма */
 .movie-list-item-title {
   background-color: #333;
   padding: 0 10px;
@@ -195,10 +225,11 @@ body {
   position: absolute;
   top: 10%;
   left: 50px;
-  opacity: 0;
+  opacity: 0; /* Изначально скрыт */
   transition: 1s all ease-in-out;
 }
 
+/* Описание фильма */
 .movie-list-item-desc {
   background-color: #333;
   padding: 10px;
@@ -207,10 +238,11 @@ body {
   top: 30%;
   left: 50px;
   width: 230px;
-  opacity: 0;
+  opacity: 0; /* Изначально скрыто */
   transition: 1s all ease-in-out;
 }
 
+/* Кнопка фильма */
 .movie-list-item-button {
   padding: 10px;
   background-color: #4dbf00;
@@ -222,10 +254,11 @@ body {
   position: absolute;
   bottom: 20px;
   left: 50px;
-  opacity: 0;
+  opacity: 0; /* Изначально скрыта */
   transition: 1s all ease-in-out;
 }
 
+/* Стрелка для прокрутки */
 .arrow {
   font-size: 120px;
   position: absolute;
@@ -236,6 +269,7 @@ body {
   cursor: pointer;
 }
 
+/* Стили для активной (светлой) темы */
 .container.active {
   background-color: white;
 }
@@ -246,7 +280,6 @@ body {
 
 .navbar-container.active {
   background-color: white;
-
   color: black;
 }
 
@@ -264,11 +297,12 @@ body {
 
 .toggle-ball.active{
     background-color: white;
-    transform: translateX(-20px);
+    transform: translateX(-20px); /* Перемещение шарика переключателя */
 }
 
+/* Медиазапрос для адаптации под экраны меньше 940px */
 @media only screen and (max-width: 940px){
     .menu-container{
-        display: none;
+        display: none; /* Скрытие меню на маленьких экранах */
     }
 }
