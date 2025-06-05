@@ -6,54 +6,77 @@ const movieLists = document.querySelectorAll(".movie-list");
 
 //* Для каждой стрелки добавляем обработчик клика
 arrows.forEach((arrow, i) => {
-  //* Количество изображений (постеров фильмов) в текущем списке
   const itemNumber = movieLists[i].querySelectorAll("img").length;
-  
-  //* Счетчик кликов (для отслеживания позиции прокрутки)
   let clickCounter = 0;
   
-  //* Обработчик клика на стрелку
   arrow.addEventListener("click", () => {
-    //* Рассчитываем количество видимых элементов в зависимости от ширины экрана
-    //* (270px - примерная ширина одного элемента)
     const ratio = Math.floor(window.innerWidth / 270);
-    
-    //* Увеличиваем счетчик кликов
     clickCounter++;
     
-    //* Проверяем, можно ли еще прокручивать список
     if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
-      //* Сдвигаем список влево на 300px
       movieLists[i].style.transform = `translateX(${
         movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
       }px)`;
     } else {
-      //* Если достигнут конец списка, возвращаем в начало
       movieLists[i].style.transform = "translateX(0)";
-      clickCounter = 0; //* Сбрасываем счетчик
+      clickCounter = 0;
     }
   });
-
-  //* Логируем количество элементов, которые могут поместиться на экране
-  console.log(Math.floor(window.innerWidth / 270));
 });
 
 //* ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ
-
-//* Получаем шарик переключателя
 const ball = document.querySelector(".toggle-ball");
-
-//* Получаем все элементы, которые нужно переключать между темами
 const items = document.querySelectorAll(
   ".container,.movie-list-title,.navbar-container,.sidebar,.left-menu-icon,.toggle"
 );
 
-// *Добавляем обработчик клика на шарик
 ball.addEventListener("click", () => {
-  //* Для каждого элемента переключаем класс "active"
   items.forEach((item) => {
     item.classList.toggle("active");
   });
-  //* Также переключаем класс для самого шарика
   ball.classList.toggle("active");
 });
+
+//* НАВИГАЦИЯ ПО РАЗДЕЛАМ
+function setupNavigation() {
+  const menuItems = document.querySelectorAll('.menu-list-item');
+  const contentSections = {
+    home: document.querySelector('.featured-content:first-of-type'),
+    movies: document.querySelectorAll('.movie-list-container')[0],
+    series: document.querySelectorAll('.movie-list-container')[1],
+    popular: document.querySelectorAll('.movie-list-container')[2]
+  };
+
+  // Показываем домашний раздел по умолчанию
+  contentSections.home.classList.add('active');
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Удаляем активный класс у всех пунктов меню
+      menuItems.forEach(i => i.classList.remove('active'));
+      // Добавляем активный класс к текущему пункту
+      item.classList.add('active');
+      
+      // Скрываем все разделы
+      Object.values(contentSections).forEach(section => {
+        if (section) section.classList.remove('active');
+      });
+      
+      // Показываем выбранный раздел
+      const section = item.dataset.section;
+      if (contentSections[section]) {
+        contentSections[section].classList.add('active');
+        
+        // Прокручиваем к выбранному разделу
+        contentSections[section].scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+}
+
+// Вызываем функцию после загрузки DOM
+document.addEventListener('DOMContentLoaded', setupNavigation);
+
+// В обработчике клика по пункту меню:
+contentSections[section].scrollIntoView({ behavior: 'smooth' });
+

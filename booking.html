@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - CINEMA_KOT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">CINEMA_KOT</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item"><a href="indexs.html">Дом</a></li>
+                    <li class="menu-list-item">Фильмы</li>
+                    <li class="menu-list-item">Сериалы</li>
+                    <li class="menu-list-item">Популярное</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <i class="left-menu-icon fas fa-search"></i>
+        <i class="left-menu-icon fas fa-home"></i>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+        <i class="left-menu-icon fas fa-shopping-cart"></i>
+    </div>
+
+    <div class="container">
+        <div class="content-container">
+            <div class="booking-container">
+                <h1>Бронирование билетов</h1>
+                <div class="booking-form">
+                    <div class="form-group">
+                        <label for="movie">Фильм:</label>
+                        <select id="movie" name="movie">
+                            <option value="avengers">Мстители</option>
+                            <option value="starwars">Звездные войны</option>
+                            <option value="1917">1917</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Дата:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Время:</label>
+                        <select id="time" name="time">
+                            <option value="10:00">10:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="22:00">22:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="seats">Количество мест:</label>
+                        <input type="number" id="seats" name="seats" min="1" max="10" value="1">
+                    </div>
+                    <button class="booking-button">Забронировать</button>
+                </div>
+                <div class="cinema-hall">
+                    <h3>Выберите места:</h3>
+                    <div class="screen">Экран</div>
+                    <div class="seats-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html> 

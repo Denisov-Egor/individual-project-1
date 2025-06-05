@@ -18,14 +18,14 @@
             <div class="logo-container">
                 <h1 class="logo">CINEMA_KOT</h1>
             </div>
-            <div class="menu-container">
-                <ul class="menu-list">
-                    <li class="menu-list-item active">Дом</li>
-                    <li class="menu-list-item">Фильмы</li>
-                    <li class="menu-list-item">Сериалы</li>
-                    <li class="menu-list-item">Популярное</li>
-                </ul>
-            </div>
+                <div class="menu-container">
+                    <ul class="menu-list">
+                    <li class="menu-list-item active" data-section="home">Дом</li>
+                    <li class="menu-list-item" data-section="movies">Фильмы</li>
+                    <li class="menu-list-item" data-section="series">Сериалы</li>
+                    <li class="menu-list-item" data-section="popular">Популярное</li>
+                    </ul>
+                </div>
             <div class="profile-container">
                 <img class="profile-picture" src="img/profile.jpg" alt="">
                 <div class="profile-text-container">
@@ -54,120 +54,110 @@
             <div class="featured-content"
                 style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
                 <img class="featured-title" src="img/f-t-1.png" alt="">
-                <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
-                    deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
-                    minima voluptatibus incidunt. Accusamus, provident.</p>
-                <button class="featured-button">WATCH</button>
+                <p class="featured-desc">Они забрали его свободу. Он заберёт у них всё.</p>
+               <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
+               <button class="featured-button" onclick="window.location.href='booking.html'">ЗАБРОНИРОВАТЬ</button> 
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h1 class="movie-list-title">Фильмы</h1>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/1.jpeg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Она</span>
+                            <p class="movie-list-item-desc">В недалёком будущем одинокий писатель влюбляется в операционную систему с искусственным интеллектом. Фильм исследует тему любви, одиночества и технологий.
+
+.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/2.jpeg" alt="">
-                            <span class="movie-list-item-title">Star Wars</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Звёздные войны</span>
+                            <p class="movie-list-item-desc">Эпическая сага о борьбе между силами добра и зла в далёкой галактике. Рыцари-джедаи, ситхи и повстанцы сражаются за свободу вселенной.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/3.jpg" alt="">
-                            <span class="movie-list-item-title">Storm</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Шторм</span>
+                            <p class="movie-list-item-desc">Драматическая история о выживании во время разрушительного урагана. Герои должны преодолеть стихию и свои страхи, чтобы спасти близких.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/4.jpg" alt="">
                             <span class="movie-list-item-title">1917</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <p class="movie-list-item-desc"> Военная драма о двух британских солдатах, которые должны доставить срочное сообщение через вражескую территорию, чтобы предотвратить гибель сотен людей.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/5.jpg" alt="">
-                            <span class="movie-list-item-title">Avengers</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Мстители</span>
+                            <p class="movie-list-item-desc">Команда супергероев объединяется, чтобы остановить титана Таноса, который хочет уничтожить половину вселенной. Эпичные битвы и невероятные спецэффекты.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/6.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Дюна</span>
+                            <p class="movie-list-item-desc">Фантастическая сага о путешествии Пола Атрейдеса на опасную планету Арракис, где скрывается ценнейший ресурс во вселенной — пряность.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/7.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Интерстеллар</span>
+                            <p class="movie-list-item-desc">Группа исследователей отправляется в космическое путешествие через червоточину, чтобы найти новый дом для человечества, пока Земля погибает.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right arrow"></i>
                 </div>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h1 class="movie-list-title">Сериалы</h1>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Игра престолов</span>
+                            <p class="movie-list-item-desc">Эпическая фэнтези-сага о борьбе за Железный трон Семи Королевств.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/9.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Во все тяжкие</span>
+                            <p class="movie-list-item-desc">Учитель химии становится наркобароном в криминальной драме.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Очень странные дела</span>
+                            <p class="movie-list-item-desc">Дети сталкиваются с паранормальными явлениями в маленьком городке.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <span class="movie-list-item-title">Друзья</span>
+                            <p class="movie-list-item-desc">Культовый ситком о жизни шестерых друзей в Нью-Йорке.</p>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/12.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/1.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/1.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right arrow"></i>
@@ -179,10 +169,10 @@
                 <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
                     deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
                     minima voluptatibus incidunt. Accusamus, provident.</p>
-                <button class="featured-button">WATCH</button>
+                <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h1 class="movie-list-title">Популярное</h1>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
@@ -190,111 +180,55 @@
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/2.jpeg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/15.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/3.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/4.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/5.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/1.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button" onclick="window.location.href='booking.html'">Забронировать</button>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right arrow"></i>
                 </div>
             </div>
-            <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/17.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/18.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/19.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                    </div>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-            </div>
+            
         </div>
     </div>
     <script src="app.js"></script>
